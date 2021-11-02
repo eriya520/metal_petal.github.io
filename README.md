@@ -1,9 +1,9 @@
 # Kaggle flower images classification using keras model
 
 -------
-Kaggle has a competition to identify over 104 classes of flowers. The data provided in the kaggle competition are Tfrecord datasets: labelled train images, lablled val images, unlablled test images datasets with different image sizes.
--------
+Kaggle has a competition to identify over 104 classes of flowers. The data provided in the kaggle competition are Tfrecord datasets: labelled train images, labelled val images, unlabelled test images datasets with different image sizes.
 
+------
 ## Project Objectives
 The objective of this project is to:
 1) Be able to read and load large Tfrecord datasets
@@ -20,7 +20,7 @@ The objective of this project is to:
 3) Evaluate the model outcome and summarize the learning on the project
 
 ## Conclusion
-To be updated
+* Project in progress, to be updated
 
 **Credits to following link for this notebook.**
 
