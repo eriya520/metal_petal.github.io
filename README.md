@@ -41,8 +41,9 @@ The objective of this project is to:
  
     * Without playing around with optimzer and learning rate, Conv2D without dropout layer has a tendency to overfit and the best testing accuracy is below 30%. Conv2D with dropout layer helped to control the overfit; however, the final model has low accuracy on both train and val datasets (<30%). Resources suggested that if we can play with the optmizer and learning rate, there is a chance we can improve the CNN model accuracy just as we can for Xception pretrain model.
     * It is, however, interesting to learn that there are fundamental difference between Global Aaverage Pooling and fully connected layer as in CNN.[resources]('https://codelabs.developers.google.com/codelabs/keras-flowers-tpu#11')
+    * 
     
-    ![](CNN_vs_GlobalAveragePooling.png)
+    ![](./saved_img/CNN_vs_GlobalAveragePooling.png)
 
 ## Acknowledgements
 
