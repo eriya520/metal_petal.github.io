@@ -17,12 +17,8 @@ The objective of this project is to:
 3) Summarize the learning after evaluating various models via different neural network algorithms
 
 ## Approach
-<<<<<<< HEAD
-1. Created a EDA.py for storing all the functions for image loading and augmentation
-=======
-1) Created a EDA.py for storing all the functions for image loading and augmentation
->>>>>>> 4ed75f76aa7e395f9acff5739de2575a9cb8fcd9
 
+1. Created a EDA.py for storing all the functions for image loading and augmentation
   *Constants defined from EDA.py*
   * `CLASS`: a list of 400 names of flowers with the index corresponding to the image labels
   * `PATH`: local parent path for test/train/val dataset
@@ -71,8 +67,5 @@ The objective of this project is to:
     * Tensorflow image processing documentation [Documentation link](https://www.tensorflow.org/tutorials/images/data_augmentation)
     * Modeling using Imagenet pretrained model [Robert Border](https://www.kaggle.com/rborder/tpu-flower-classification?kernelSessionId=78320658)[, Umar Farooq](https://medium.com/@imUmarFarooq/computer-vision-petals-to-the-metal-3465d66ad343)
     * Learning rate scheduler and callback functions [Bachr Chi, ](https://medium.com/@bechr7/learning-rate-scheduling-with-callbacks-in-tensorflow-e2ba83647013) [Udacity PyTordh Challengers](https://medium.com/udacity-pytorch-challengers/ideas-on-how-to-fine-tune-a-pre-trained-model-in-pytorch-184c47185a20)
-<<<<<<< HEAD
----
-=======
----
->>>>>>> 4ed75f76aa7e395f9acff5739de2575a9cb8fcd9
+
+
