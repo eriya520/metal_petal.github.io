@@ -33,6 +33,7 @@ The objective of this project is to:
 * This Capstone demonstrated how to ultilize Tensor Processing Unit (TPU), a distribution strategy that TensowFlow specialized in deep learning tasks by using powerful TPU cores.
 * CNN and pre-trained Xception models with self-defined learning rate schedulers were explored to construct deep learning model for multiclass classification. The best model in this project has 78% accuracy on validation dataset. 
   * The best model obtained in this project is pre-trained Xception model with AverageGlobalPooling2D layer model with self-defined learning rate, but the time-based decay learning rate is also as effective. The step-decay learning rate algorithm has slightly lower accuracy, and also it requires much longer time to fit the model (15 epochs).
+  
   |-|Time-based decay|Self-defined learning decay|Conv2d+dropout|
   |---|---|---|---|
   |**Learning rate decay** |![](./saved_img/time_lr.jpeg)|![](./saved_img/lrfn_lr.jpeg)|*default in adam optimizer*|
