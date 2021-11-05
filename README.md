@@ -1,7 +1,13 @@
-# Kaggle flower images classification using keras model
+# Flower images classification (104 classes)-Keras deep learning model comparison
 
 -------
-Kaggle has a competition to identify over 104 classes of flowers. The data provided in the kaggle competition are Tfrecord datasets: labelled train images, labelled val images, unlabelled test images datasets with different image sizes.
+Kaggle has a competition to identify over 104 classes of flowers. The data provided in the kaggle competition are Tfrecord datasets: 
+* labelled train images
+* labelled val images 
+* unlabelled test images datasets
+
+The competition has data of various image sizes, in this project we are using the following image size: 
+* 224 x 224
 
 ------
 ## Project Objectives
@@ -11,7 +17,11 @@ The objective of this project is to:
 3) Summarize the learning after evaluating various models via different neural network algorithms
 
 ## Approach
+<<<<<<< HEAD
+1. Created a EDA.py for storing all the functions for image loading and augmentation
+=======
 1) Created a EDA.py for storing all the functions for image loading and augmentation
+>>>>>>> 4ed75f76aa7e395f9acff5739de2575a9cb8fcd9
 
   *Constants defined from EDA.py*
   * `CLASS`: a list of 400 names of flowers with the index corresponding to the image labels
@@ -21,17 +31,23 @@ The objective of this project is to:
   * `TEST_FILES`: path associated with all files (unlabelled but with ID number) in test data folder
   *  Functions defined to load labelled and unlabelled data, do augmentation, normalization on the image data
 
-2) In the modeling notebook, focus on comparing three different models:
+2. In the modeling notebook, focus on comparing three different models:
   * Conv2D+Maxpooling with 3 hidden layers
   * Conv2D+Maxpooling with dropout layers
   * GlobalAveragePooling2D with LearningRateScheduler and self-defined learning rate algorithms(Time-based decay, Step-based decay and a self-defined learning rate algorithms.)
 
-3) Evaluate the model outcome and summarize the learning on the project
+3.Evaluate the model outcome and summarize the learning on the project
   * compare the compute efficiency and accuracy on val datasets
 
 ## Conclusion
 
-* This Capstone demonstrated how to ultilize Tensor Processing Unit (TPU), a distribution strategy that TensowFlow specialized in deep learning tasks by using powerful TPU cores.
+* This capstone project demonstrated how the choice of tensor flow model, self_learning rate could influence image recognition accuracy
+  * CNN without dropout layer  --overall low accuracy on validation dataset, overfit
+  * CNN with dropout layer     --overall low accuracy on validation dataset, overfit is controlled
+  * Pretrained Xception model with time-based decay learning rate  --the best accuracy 77% on validation within 10 epochs, overfit 
+  * Pretrained Xception model with step-based decay learning rate  --comparable or slightly lower accuracy on validation within 6 epoches, overfit
+  * Pretrained Xception model with self defined learning rate      --comparable accuracy 78% on validation within 15 epoches, overfit
+  
 * CNN and pre-trained Xception models with self-defined learning rate schedulers were explored to construct deep learning model for multiclass classification. The best model in this project has 78% accuracy on validation dataset. 
   * The best model obtained in this project is pre-trained Xception model with AverageGlobalPooling2D layer model with self-defined learning rate, but the time-based decay learning rate is also as effective. The step-decay learning rate algorithm has slightly lower accuracy, and also it requires much longer time to fit the model (15 epochs).
   
@@ -55,4 +71,8 @@ The objective of this project is to:
     * Tensorflow image processing documentation [Documentation link](https://www.tensorflow.org/tutorials/images/data_augmentation)
     * Modeling using Imagenet pretrained model [Robert Border](https://www.kaggle.com/rborder/tpu-flower-classification?kernelSessionId=78320658)[, Umar Farooq](https://medium.com/@imUmarFarooq/computer-vision-petals-to-the-metal-3465d66ad343)
     * Learning rate scheduler and callback functions [Bachr Chi, ](https://medium.com/@bechr7/learning-rate-scheduling-with-callbacks-in-tensorflow-e2ba83647013) [Udacity PyTordh Challengers](https://medium.com/udacity-pytorch-challengers/ideas-on-how-to-fine-tune-a-pre-trained-model-in-pytorch-184c47185a20)
+<<<<<<< HEAD
 ---
+=======
+---
+>>>>>>> 4ed75f76aa7e395f9acff5739de2575a9cb8fcd9
