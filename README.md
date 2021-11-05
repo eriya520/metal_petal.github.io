@@ -12,7 +12,8 @@ The objective of this project is to:
 
 ## Approach
 1) Created a EDA.py for storing all the functions for image loading and augmentation
-  ### Constants defined from EDA.py
+
+  *Constants defined from EDA.py*
   * `CLASS`: a list of 400 names of flowers with the index corresponding to the image labels
   * `PATH`: local parent path for test/train/val dataset
   * `TRAIN_FILES`: path associated with all files(labelled) in train data folder
