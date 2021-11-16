@@ -51,8 +51,8 @@ In order to utilize TPUs, this project will use Google Colab to best utilize the
 |time_model_3|Xception|0|N|Time-decay LR|extremely overfit|83%|
 |time_model_2|Xception|2|N|Time-decay LR|greatly overfit|83%|
 |step_model|Xception|1|N|Step-wise decay LR|slightly overfit|85%|
-|step_model_2|Xception|2|N|Step_wise decay LR|greatly overfit|85%|
-|lrfn_model|Xception|1|N|Self-defined decay LR|slightly overfit|85%|
+|step_model_2|Xception|2|N|Step_wise decay LR|least overfit|85%|
+|lrfn_model|Xception|1|N|Self-defined decay LR|greatly overfit|85%|
 
 
 ## Summary of model performances
