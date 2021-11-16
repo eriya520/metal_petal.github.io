@@ -41,7 +41,6 @@ In order to utilize TPUs, this project will use Google Colab to best utilize the
   * Resources suggested that if we can play with the optmizer and learning rate, there is a chance we can improve the CNN model accuracy from 23%; however, it is interesting to learn that there are fundamental difference between Global Aaverage Pooling and fully connected layer as in CNN.[resources]('https://codelabs.developers.google.com/codelabs/keras-flowers-tpu#11')
 
 
-
 * Fine-tuning parameters and augmentation are utilized in the deep learning using pre-trained Xception models with different learning rate scheduler and dropout layer.
 
 |Model nomenclature|pretrain_model|Dropout_layers|Image_augmentation|LR algorithms|Overfit|Val_accuracy|
@@ -54,21 +53,23 @@ In order to utilize TPUs, this project will use Google Colab to best utilize the
 |step_model|Xception|1|N|Step-wise decay LR|slightly overfit|85%|
 |step_model_2|Xception|2|N|Step_wise decay LR|greatly overfit|85%|
 |lrfn_model|Xception|1|N|Self-defined decay LR|slightly overfit|85%|
-|lrfn_model_2|Xception|2|N|Self-defined decay LR|greatly overfit|85%|
 
-### Summary of model performances
+
+## Summary of model performances
 with self-defined learning rate schedulers were explored to construct deep learning model for multiclass classification. All LR algorithms have similar val accuracy (83-85%), but models with time_based decay and step_wise decay able to reach optimum val performance at less epochs than lrfn_decay.
+* **Pretrained weights**: pretrained weights has more stable performance on validation accuracy, also has better control in overfit
 * **dropout_layer**: 1 dropout layer with drate_rate = 0.5 is the best params
 * **image_augmentation**: additional image_augmentation such as random rotation and random flip does not further impact on the validation accuracy.
-* **learning rate**: time-based and step-wise decay both worked similar, lrfn_decay has lower val_performance at less epochs (epochs <10). 
+* **learning rate**: time-based and step-wise decay both have similar val accuracy, but step-wise decay control overfit more effectively.self defined LR_decay has lower val_performance at less epochs (epochs <10). 
 
 
 ## Credits
 
 * Credits to the following resources which inspired and educated me 
-    * Special Thanks to **Caroline S.**  for consulting and tips
+    * Special Thanks to **Caroline S.** and **Adi B.**   for consulting and tips
     * GCS connection with Colab instructions [link](https://colab.research.google.com/notebooks/snippets/accessing_files.ipynb)
     * Tensorflow callbacks documentation [Documentation link](https://www.tensorflow.org/guide/keras/custom_callback)
     * Tensorflow image processing documentation [Documentation link](https://www.tensorflow.org/tutorials/images/data_augmentation)
     * Modeling using Keras image recognition pretrained model [Robert Border](https://www.kaggle.com/rborder/tpu-flower-classification?kernelSessionId=78320658)[, Umar Farooq](https://medium.com/@imUmarFarooq/computer-vision-petals-to-the-metal-3465d66ad343)
     * Learning rate scheduler and callback functions [Bachr Chi](https://medium.com/@bechr7/learning-rate-scheduling-with-callbacks-in-tensorflow-e2ba83647013) [Udacity PyTordh Chllengers](https://medium.com/udacity-pytorch-challengers/ideas-on-how-to-fine-tune-a-pre-trained-model-in-pytorch-184c47185a20)
+    * Streamlit for keras model [streamlit documentation](https://docs.streamlit.io/library/api-reference/media/st.image) [Jalal Manssori](https://towardsdatascience.com/how-to-build-an-image-classification-app-using-logistic-regression-with-a-neural-network-mindset-1e901c938355)[ Nachiketa Hebbar](https://youtu.be/Q1NC3NbmVlc)
