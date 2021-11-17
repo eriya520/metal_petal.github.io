@@ -72,12 +72,12 @@ models = st.sidebar.selectbox('Select a model', ('model_1','model_2','model_comb
 model_dict = {'model_1':model_1, 'model_2':model_2, 'model_combined':'model_combined'}
 prediction = st.sidebar.button('Make a prediction')
 
-#define  function to make prediction based on selection of model from models
+#define  function to make prediction based on the selection from models
 def show_prediction(file, model):
     #get the string of the model
     model_key = [key for key, value in model_dict.items() if value == model][0]
     #show the selected model 
-    st.write('Model chosen: ' + model_key)
+    st.subheader('Model chosen: ' + model_key)
     image = Image.open(file)
     st.image(image, use_column_width = False, width =331)
 
@@ -104,10 +104,12 @@ if options == 'user image':
 
         
 else:
-    if prediction:    # randomly select a file from streamlit_image folder
+    if prediction:    
+	# randomly select a file from streamlit_image folder
         main_path = './streamlit_image/'
         filename = random.choice(os.listdir(main_path))
         image_path = os.path.join(main_path, filename)
+
         prediction_text = show_prediction(image_path, model_dict[models])
         time.sleep(1)
         st.subheader(prediction_text)
